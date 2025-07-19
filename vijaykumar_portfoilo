@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uppu Vijaykumar | Project Portfolio: Serene Minds</title>
+    <meta name="description" content="The professional portfolio of Uppu Vijaykumar, featuring the 'Serene Minds' project and other works in Android, Data Analysis, and C++." />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+            transition: background 0.4s ease-in-out, transform 0.3s;
+        }
+
+        html.dark .glass-card {
+            background: rgba(30, 32, 48, 0.5);
+            border-color: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        body {
+            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen font-sans antialiased">
+
+    <header class="bg-white/30 dark:bg-gray-900/50 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-200/50 dark:border-gray-700/50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-indigo-600 dark:text-indigo-400">Uppu Vijaykumar</a>
+            <div class="hidden md:flex items-center space-x-6 text-base">
+                <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
+                <a href="#serene-minds" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Serene Minds</a>
+                <a href="#other-projects" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Other Projects</a>
+                <a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+            </div>
+            <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.706-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm-.707 8.486a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <section class="text-center py-16 md:py-20" data-aos="fade-in">
+            <img src="v1.jpg" alt="Uppu Vijaykumar" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-white dark:border-gray-800 shadow-xl object-cover">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-3">Uppu Vijaykumar</h1>
+            <p class="text-xl md:text-2xl text-indigo-600 dark:text-indigo-400 font-semibold mb-6">
+                 Student at SRM AP university
+            </p>
+            <p class="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">
+                Passionate about building robust applications, from full-stack web platforms to data-driven analysis and performance-critical systems.
+            </p>
+             <div class="flex justify-center space-x-6 mt-8">
+                <a href="https://www.linkedin.com/in/uppu-vijaykumar-2a0251291/" target="_blank" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-transform duration-300 hover:scale-110" aria-label="LinkedIn Profile">
+                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM8.34 16.73H5.67v-6.16h2.67v6.16zm-1.34-7.1c-.86 0-1.57-.71-1.57-1.57 0-.87.71-1.58 1.57-1.58.86 0 1.58.71 1.58 1.58 0 .86-.72 1.57-1.58 1.57zm10.43 7.1h-2.67v-3.08c0-.74-.01-1.69-1.02-1.69-1.02 0-1.18.8-1.18 1.63v3.14h-2.67v-6.16h2.56v.84h.04c.36-.67 1.25-1.38 2.57-1.38 2.75 0 3.26 1.81 3.26 4.16v4.54z"/></svg>
+                </a>
+                <a href="https://github.com/Vijaykumar-1121" target="_blank" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-transform duration-300 hover:scale-110" aria-label="GitHub Profile">
+                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.67c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1.01.07 1.54 1.03 1.54 1.03.89 1.53 2.34 1.1 2.91.84.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.95 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.28.1-2.67 0 0 .84-.27 2.75 1.03a9.6 9.6 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.39.2 2.41.1 2.67.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.3.68.91.68 1.83v2.72c0 .26.16.57.67.48A10.02 10.02 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+                </a>
+                 <a href="https://instagram.com/umavijay9999" target="_blank" class="text-gray-500 dark:text-gray-400 hover:text-pink-600 dark:hover:text-pink-500 transition-transform duration-300 hover:scale-110" aria-label="Instagram Profile">
+                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10a5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7zm6-1.13a1 1 0 1 1 0 2a1 1 0 0 1 0-2z"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="py-16">
+            <div class="grid md:grid-cols-5 gap-10 items-start">
+                <div class="md:col-span-3" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold mb-4 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                        About Me
+                    </h2>
+                    <div class="glass-card p-6 md:p-8 space-y-4 text-lg">
+                        <p>I am a passionate and driven Computer Science student from Markapur, Andhra Pradesh, specializing in full-stack development, algorithms, and data science.</p>
+                        <p>My goal is to leverage technology to create meaningful applications that solve real-world problems. I thrive on learning new skills, tackling complex challenges, and collaborating on projects that make a difference.</p>
+                    </div>
+                </div>
+                <div class="md:col-span-2" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold mb-4 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M12 6V3m0 18v-3" /></svg>
+                        Core Skills
+                    </h2>
+                    <div class="glass-card p-6 md:p-8">
+                        <span class="tech-tag">Java</span><span class="tech-tag">Python</span><span class="tech-tag">C++</span><span class="tech-tag">JavaScript</span><span class="tech-tag">Node.js</span><span class="tech-tag">MongoDB</span><span class="tech-tag">Android Studio</span><span class="tech-tag">Data Analysis</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="serene-minds" class="py-16">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    Portfolio Project: Serene Minds
+                </h2>
+                <p class="max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400 mb-8">
+                    A student-focused <strong>Mental Health Support Platform</strong> designed to bridge the gap in campus wellness resources through scalable, modern web technology.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="font-bold text-xl mb-2 text-indigo-700 dark:text-indigo-300">Development Process</h3>
+                    <ol class="list-decimal pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                        <li>Designed a responsive layout using TailwindCSS utility classes.</li>
+                        <li>Implemented glassmorphism and subtle animations for a modern UI.</li>
+                        <li>Built a scalable backend with Node.js/Express for RESTful APIs.</li>
+                        <li>Integrated MongoDB Atlas for flexible, cloud-native data storage.</li>
+                        <li>Deployed the application on Render for continuous and secure hosting.</li>
+                    </ol>
+                </div>
+                <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="font-bold text-xl mb-2 text-indigo-700 dark:text-indigo-300">Result</h3>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        The final portfolio effectively demonstrates proficiency in modern MERN stack development, responsive design principles, and deployment workflows. The project is visually polished, technically robust, and serves as a professional showcase of my capabilities.
+                    </p>
+                </div>
+                <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="font-bold text-xl mb-2 text-indigo-700 dark:text-indigo-300">Future Scope</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                        <li>Integrate telehealth features for live counseling.</li>
+                        <li>Develop native mobile apps for iOS and Android.</li>
+                        <li>Add multi-language support to increase accessibility.</li>
+                        <li>Implement a feedback system with a testimonials carousel.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="other-projects" class="py-16">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="text-3xl font-bold mb-4 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" /></svg>
+                    Other Notable Projects
+                </h2>
+                <p class="max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400 mb-12">
+                    A selection of my work demonstrating my skills in other domains.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card p-6 flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="font-bold text-xl mb-3 text-indigo-700 dark:text-indigo-300">Hotel Management System</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4 flex-grow">An Android application built with Java to streamline hotel operations, including room booking, guest management, and billing services.</p>
+                    <div class="mt-auto">
+                        <span class="tech-tag">Java</span><span class="tech-tag">Android Studio</span><span class="tech-tag">XML</span><span class="tech-tag">SQLite</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="font-bold text-xl mb-3 text-indigo-700 dark:text-indigo-300">Unemployment Rate Analysis</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4 flex-grow">A data analysis project using Python to process, analyze, and visualize unemployment data, uncovering trends and correlations.</p>
+                    <div class="mt-auto">
+                        <span class="tech-tag">Python</span><span class="tech-tag">Pandas</span><span class="tech-tag">Matplotlib</span><span class="tech-tag">Seaborn</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="font-bold text-xl mb-3 text-indigo-700 dark:text-indigo-300">Transport Management System</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4 flex-grow">A performance-focused C++ application implementing graph algorithms to solve logistical challenges like shortest path finding and network optimization.</p>
+                    <div class="mt-auto">
+                        <span class="tech-tag">C++</span><span class="tech-tag">Data Structures</span><span class="tech-tag">Algorithms</span><span class="tech-tag">OOP</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 text-center" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-4 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                Get In Touch
+            </h2>
+            <p class="max-w-xl mx-auto text-lg text-gray-600 dark:text-gray-400 mb-6">
+                I'm currently open to new opportunities and collaborations. Feel free to reach out!
+            </p>
+            <a href="mailto:vijay112103@gmail.com" class="inline-block bg-indigo-600 text-white font-bold text-lg px-8 py-3 rounded-lg shadow-lg hover:bg-indigo-700 hover:scale-105 transform transition-all duration-300">
+                Contact Me
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="w-full text-center py-6 text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800/50">
+        &copy; 2025 Uppu Vijaykumar &middot; Markapur, Andhra Pradesh
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // AOS Initialization
+        AOS.init({
+            once: true,
+            duration: 600,
+            offset: 50,
+            easing: 'ease-in-out',
+        });
+
+        // Vanilla Tilt Initialization
+        VanillaTilt.init(document.querySelectorAll(".glass-card"), {
+            max: 6,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.1,
+            scale: 1.02
+        });
+
+        // Dark/Light Mode Toggle Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+
+        // Add a reusable style for the tech tags
+        const style = document.createElement('style');
+        style.innerHTML = `
+            .tech-tag {
+                display: inline-block;
+                background-color: rgb(224 231 255 / var(--tw-bg-opacity));
+                color: rgb(67 56 202 / var(--tw-text-opacity));
+                font-size: 0.75rem; /* 12px */
+                font-weight: 600;
+                margin-right: 0.5rem;
+                margin-bottom: 0.5rem;
+                padding: 0.25rem 0.75rem;
+                border-radius: 9999px;
+            }
+            html.dark .tech-tag {
+                --tw-bg-opacity: 0.5;
+                background-color: rgb(49 46 129 / var(--tw-bg-opacity));
+                --tw-text-opacity: 1;
+                color: rgb(199 210 254 / var(--tw-text-opacity));
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
