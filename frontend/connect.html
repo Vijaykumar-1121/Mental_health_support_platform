@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect - MindWell</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-stone-50 text-stone-800">
+    <div class="min-h-screen flex flex-col">
+        <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2 text-2xl font-bold text-amber-600">
+                    <img src="\frontend\assets\icons\logo.svg" alt="MindWell Logo" class="h-8">
+                    MindWell
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html" class="text-stone-600 hover:text-amber-600 transition">About Us</a>
+                    <a href="connect.html" class="text-stone-600 hover:text-amber-600 transition">Connect</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-2">
+                    <a href="login.html" class="px-4 py-2 text-amber-600 font-semibold rounded-md hover:bg-amber-50 transition">Login</a>
+                    <a href="signup.html" class="px-4 py-2 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600 transition">Sign Up</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-stone-800 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </nav>
+            <div id="mobile-menu" class="hidden md:hidden">
+                <a href="about.html" class="block py-2 px-6 text-sm text-stone-600 hover:bg-amber-50">About Us</a>
+                <a href="connect.html" class="block py-2 px-6 text-sm text-stone-600 hover:bg-amber-50">Connect</a>
+                <a href="login.html" class="block py-2 px-6 text-sm text-stone-600 hover:bg-amber-50">Login</a>
+                <a href="signup.html" class="block py-2 px-6 text-sm text-stone-600 hover:bg-amber-50">Sign Up</a>
+            </div>
+        </header>
+        <main class="bg-white py-20 flex-grow">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl font-bold text-stone-800 mb-4">Connect with Support</h1>
+                <p class="text-lg text-stone-600 max-w-3xl mx-auto mb-16">Find the right support for you. Our platform offers both professional counseling sessions and an instant AI assistant to help you navigate your thoughts and feelings.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto mb-20">
+                    <div class="bg-stone-50 p-6 rounded-xl shadow-lg flex flex-col items-center text-center transition-transform transform hover:-translate-y-2"><img src="/frontend/assets/images/me.jpg" alt="Dr. Vijaykumar" class="w-32 h-32 rounded-full object-cover mb-4 shadow-md"><h4 class="text-xl font-bold">Dr. Vijaykumar</h4><p class="text-sm text-stone-500 mb-4">Licensed Professional Counselor</p><p class="text-stone-600 text-sm flex-grow">Specializes in anxiety, stress management, and academic pressure.</p><a href="login.html" class="mt-6 w-full inline-block bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 transition">Login to Book</a></div>
+                    <div class="bg-stone-50 p-6 rounded-xl shadow-lg flex flex-col items-center text-center transition-transform transform hover:-translate-y-2"><img src="/frontend/assets/images/me.jpg" alt="Dr. Eswar sai" class="w-32 h-32 rounded-full object-cover mb-4 shadow-md"><h4 class="text-xl font-bold">Dr. EswarSai</h4><p class="text-sm text-stone-500 mb-4">Clinical Psychologist</p><p class="text-stone-600 text-sm flex-grow">Focuses on depression, relationship challenges, and building resilience.</p><a href="login.html" class="mt-6 w-full inline-block bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 transition">Login to Book</a></div>
+                    <div class="bg-stone-50 p-6 rounded-xl shadow-lg flex flex-col items-center text-center transition-transform transform hover:-translate-y-2"><img src="/frontend/assets/images/me.jpg" alt="Dr. Gunatej" class="w-32 h-32 rounded-full object-cover mb-4 shadow-md"><h4 class="text-xl font-bold">Dr. Gunatej</h4><p class="text-sm text-stone-500 mb-4">Mental Health Specialist</p><p class="text-stone-600 text-sm flex-grow">Expertise in mindfulness, self-esteem, and navigating life transitions.</p><a href="login.html" class="mt-6 w-full inline-block bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 transition">Login to Book</a></div>
+                </div>
+                <div class="bg-amber-100/50 p-8 rounded-xl max-w-3xl mx-auto"><h2 class="text-3xl font-bold text-stone-800 mb-4">Need to talk right now?</h2><p class="text-lg text-stone-600 mb-6">Our AI assistant is available 24/7 to listen and provide immediate support in a safe, anonymous chat.</p><a href="login.html" class="inline-block bg-amber-600 text-white font-bold py-3 px-8 rounded-full hover:bg-amber-700 transition">Login to Chat</a></div>
+            </div>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

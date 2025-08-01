@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About MindWell - Student Mental Health Support</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <div class="min-h-screen flex flex-col">
+        <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2 text-2xl font-bold text-amber-600">
+                    <img src="assets/icons/logo.svg" alt="MindWell Logo" class="h-8">
+                    MindWell
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html" class="text-stone-600 hover:text-amber-600 transition">About Us</a>
+                    <a href="connect.html" class="text-stone-600 hover:text-amber-600 transition">Connect</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-2">
+                    <a href="login.html" class="px-4 py-2 text-amber-600 font-semibold rounded-md hover:bg-amber-50 transition">Login</a>
+                    <a href="signup.html" class="px-4 py-2 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600 transition">Sign Up</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-stone-800 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </nav>
+            <div id="mobile-menu" class="hidden md:hidden">
+                <a href="about.html" class="block py-2 px-6 text-sm text-stone-600 hover:bg-amber-50">About Us</a>
+                <a href="connect.html" class="block py-2 px-6 text-sm text-stone-600 hover:bg-amber-50">Connect</a>
+                <a href="login.html" class="block py-2 px-6 text-sm text-stone-600 hover:bg-amber-50">Login</a>
+                <a href="signup.html" class="block py-2 px-6 text-sm text-stone-600 hover:bg-amber-50">Sign Up</a>
+            </div>
+        </header>
+        <main class="bg-white py-16 md:py-24 flex-grow">
+            <div class="container mx-auto px-6">
+                <section class="text-center max-w-4xl mx-auto mb-16">
+                    <h1 class="text-4xl md:text-5xl font-bold text-stone-800 mb-4">A Space for Student Wellness</h1>
+                    <p class="text-lg text-stone-600 leading-relaxed">Navigating student life is a unique journey with its own set of pressures. MindWell was born from the understanding that mental health is a crucial part of that journey. We're not just a platform; we're a companion dedicated to providing the tools and support you need to thrive, not just survive.</p>
+                </section>
+                <section class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center mb-20">
+                    <div class="bg-stone-50 p-8 rounded-xl shadow-sm"><div class="flex-shrink-0 w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div><h3 class="font-bold text-xl mb-2">Built with Empathy</h3><p class="text-stone-600">Created by a student, for students. We get it. Our tools and resources are designed with your specific challenges in mind.</p></div>
+                    <div class="bg-stone-50 p-8 rounded-xl shadow-sm"><div class="flex-shrink-0 w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 1 0-10-10_10 10 0 0 0 10 10z"/><path d="m16 16-4-4-4 4"/><path d="M12 12V6"/></svg></div><h3 class="font-bold text-xl mb-2">Always Accessible</h3><p class="text-stone-600">Support shouldn't have office hours. Access our AI assistant, resources, and tools 24/7, whenever you need them.</p></div>
+                    <div class="bg-stone-50 p-8 rounded-xl shadow-sm"><div class="flex-shrink-0 w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7.5"/><path d="M16 22l5-5"/><path d="M16 12h-4"/><path d="M16 8h-6"/><path d="M10 16h-2"/></svg></div><h3 class="font-bold text-xl mb-2">Confidential & Safe</h3><p class="text-stone-600">Your privacy is paramount. We provide a secure and non-judgmental space for you to explore your thoughts and feelings.</p></div>
+                </section>
+                <section class="bg-stone-50 p-10 rounded-xl shadow-md max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-8">The Story Behind MindWell</h2>
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <img src="/frontend/assets/images/me.jpg" alt="Uppu Vijaykumar" class="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover flex-shrink-0 shadow-lg">
+                        <div class="text-center md:text-left"><p class="text-stone-600 mb-4 leading-relaxed">"As a student myself, I saw my peers and I struggling with the weight of academic pressure, social anxiety, and the general stress of university life. I realized there was a need for a centralized, student-focused platform that offered immediate, judgment-free support. That's why I created MindWell — to be the resource I wish I had. It’s a place to find clarity, connect with others, and remember that you're not alone."</p><h4 class="text-xl font-bold">Uppu Vijaykumar</h4><p class="text-stone-500"> SRMAP Student | Web Developer</p></div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

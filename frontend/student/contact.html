@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MindWell</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body class="bg-stone-100">
+
+    <div class="min-h-screen flex flex-col">
+        <!-- Top Navigation -->
+        <header class="bg-white shadow-md sticky top-0 z-50">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="../index.html" class="flex items-center gap-2 text-2xl font-bold text-amber-600">
+                    <img src="\frontend\assets\icons\logo.svg" alt="MindWell Logo" class="h-8">
+                    MindWell
+                </a>
+                
+                <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold">
+                    <a href="dashboard.html" class="text-stone-600 hover:text-orange-500 transition-colors">Dashboard</a>
+                    <a href="mood-tracker.html" class="text-stone-600 hover:text-orange-500 transition-colors">Mood Tracker</a>
+                    <a href="journal.html" class="text-stone-600 hover:text-orange-500 transition-colors">Journal</a>
+                    <a href="appointments.html" class="text-stone-600 hover:text-orange-500 transition-colors">Appointments</a>
+                    <a href="resources.html" class="text-stone-600 hover:text-orange-500 transition-colors">Resources</a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <div class="relative">
+                        <button id="help-button" class="text-stone-600 hover:text-orange-500 transition-colors">
+                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </button>
+                        <div id="help-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl z-20">
+                            <a href="feedback.html" class="block px-4 py-2 text-stone-600 hover:bg-stone-100">Feedback</a>
+                            <a href="report-problem.html" class="block px-4 py-2 text-stone-600 hover:bg-stone-100">Report a Problem</a>
+                            <a href="contact.html" class="block px-4 py-2 text-stone-600 hover:bg-stone-100">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <button id="profile-button" class="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-lg">U</button>
+                        <div id="profile-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl z-20">
+                            <a href="profile.html" class="block px-4 py-2 text-stone-600 hover:bg-stone-100">Profile</a>
+                            <a href="../index.html" class="block px-4 py-2 text-stone-600 hover:bg-stone-100">Logout</a>
+                        </div>
+                    </div>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-stone-800 focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-1 overflow-x-hidden overflow-y-auto bg-stone-100 p-6">
+            <div class="container mx-auto max-w-4xl">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl font-bold text-stone-800 mb-2">Get in Touch</h1>
+                    <p class="text-lg text-stone-600">We're here to help. Reach out with any questions or concerns.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Contact Info & FAQs -->
+                    <div class="space-y-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="font-bold text-xl mb-4">Contact Information</h3>
+                            <div class="space-y-3 text-stone-700">
+                                <p><strong>Email:</strong> support@mindwell.com</p>
+                                <p><strong>Phone:</strong> (123) 456-7890</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="font-bold text-xl mb-4">Frequently Asked Questions</h3>
+                            <div id="faq-container" class="space-y-4 text-sm">
+                                <!-- FAQ Item 1 -->
+                                <div>
+                                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold">
+                                        <span>Is my data private and confidential?</span>
+                                        <svg class="w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                    </button>
+                                    <div class="faq-answer hidden mt-2 text-stone-600">
+                                        <p>Yes. Your journal entries, mood logs, and conversations with the AI assistant are private. Anonymized data may be used for analytics to improve the platform, but your personal information is never shared.</p>
+                                    </div>
+                                </div>
+                                <!-- FAQ Item 2 -->
+                                <div>
+                                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold">
+                                        <span>Is this service free for students?</span>
+                                        <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                    </button>
+                                    <div class="faq-answer hidden mt-2 text-stone-600">
+                                        <p>Yes, all features of the MindWell platform are free for registered students of this institution.</p>
+                                    </div>
+                                </div>
+                                 <!-- FAQ Item 3 -->
+                                <div>
+                                    <button class="faq-question flex justify-between items-center w-full text-left font-semibold">
+                                        <span>What should I do in a crisis?</span>
+                                        <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                    </button>
+                                    <div class="faq-answer hidden mt-2 text-stone-600">
+                                        <p>This platform is not for emergencies. If you are in a crisis, please contact a local emergency service or a crisis hotline immediately.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h2 class="text-2xl font-bold text-stone-800 mb-6">Send us a Message</h2>
+                        <form id="contact-form">
+                            <div class="mb-4">
+                                <label for="contact-name" class="block text-stone-700 font-semibold mb-2">Your Name</label>
+                                <input type="text" id="contact-name" class="w-full p-3 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 transition" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="contact-email" class="block text-stone-700 font-semibold mb-2">Your Email</label>
+                                <input type="email" id="contact-email" class="w-full p-3 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 transition" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="contact-message" class="block text-stone-700 font-semibold mb-2">Message</label>
+                                <textarea id="contact-message" rows="5" class="w-full p-3 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 transition" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-3 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600 transition">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/student-dashboard.js"></script>
+</body>
+</html>

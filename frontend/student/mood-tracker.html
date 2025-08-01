@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker - MindWell</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body class="bg-stone-100">
+
+    <div class="min-h-screen flex flex-col">
+        <!-- Top Navigation -->
+        <header class="bg-white shadow-md sticky top-0 z-50">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="../index.html" class="flex items-center gap-2 text-2xl font-bold text-amber-600">
+                    <img src="\frontend\assets\icons\logo.svg" alt="MindWell Logo" class="h-8">
+                    MindWell
+                </a>
+                
+                <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold">
+                    <a href="dashboard.html" class="text-stone-600 hover:text-orange-500 transition-colors">Dashboard</a>
+                    <a href="mood-tracker.html" class="text-orange-500 border-b-2 border-orange-500 pb-1">Mood Tracker</a>
+                    <a href="journal.html" class="text-stone-600 hover:text-orange-500 transition-colors">Journal</a>
+                    <a href="appointments.html" class="text-stone-600 hover:text-orange-500 transition-colors">Appointments</a>
+                    <a href="resources.html" class="text-stone-600 hover:text-orange-500 transition-colors">Resources</a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <!-- Get Help Dropdown -->
+                    <div class="relative">
+                        <button id="help-button" class="text-stone-600 hover:text-orange-500 transition-colors">
+                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </button>
+                        <div id="help-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl z-20">
+                            <a href="feedback.html" class="block px-4 py-2 text-stone-600 hover:bg-stone-100">Feedback</a>
+                            <a href="report-problem.html" class="block px-4 py-2 text-stone-600 hover:bg-stone-100">Report a Problem</a>
+                            <a href="contact.html" class="block px-4 py-2 text-stone-600 hover:bg-stone-100">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <button id="profile-button" class="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-lg">A</button>
+                        <div id="profile-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl z-20">
+                            <a href="profile.html" class="block px-4 py-2 text-stone-600 hover:bg-stone-100">Profile</a>
+                            <a href="../index.html" class="block px-4 py-2 text-stone-600 hover:bg-stone-100">Logout</a>
+                        </div>
+                    </div>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-stone-800 focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden border-t border-stone-200">
+                <a href="dashboard.html" class="block py-2 px-6 text-sm text-stone-600 hover:bg-stone-50">Dashboard</a>
+                <a href="mood-tracker.html" class="block py-2 px-6 text-sm text-orange-500 font-bold bg-orange-50">Mood Tracker</a>
+                <a href="journal.html" class="block py-2 px-6 text-sm text-stone-600 hover:bg-stone-50">Journal</a>
+                <a href="appointments.html" class="block py-2 px-6 text-sm text-stone-600 hover:bg-stone-50">Appointments</a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 overflow-x-hidden overflow-y-auto bg-stone-100 p-6">
+            <div class="container mx-auto max-w-2xl">
+                <div id="mood-tracker-card" class="bg-white p-8 rounded-lg shadow-md transition-colors duration-500">
+                    
+                    <div id="mood-form">
+                        <h1 class="text-3xl font-bold text-stone-800 text-center mb-2">How are you feeling today?</h1>
+                        <p class="text-center text-stone-600 mb-8">Select a mood that best represents how you feel right now.</p>
+                        
+                        <div class="flex justify-around items-center mb-8">
+                            <button class="mood-option text-5xl p-4 rounded-full transition-transform transform hover:scale-110" data-mood="awful">😞</button>
+                            <button class="mood-option text-5xl p-4 rounded-full transition-transform transform hover:scale-110" data-mood="bad">😟</button>
+                            <button class="mood-option text-5xl p-4 rounded-full transition-transform transform hover:scale-110" data-mood="okay">😐</button>
+                            <button class="mood-option text-5xl p-4 rounded-full transition-transform transform hover:scale-110" data-mood="good">🙂</button>
+                            <button class="mood-option text-5xl p-4 rounded-full transition-transform transform hover:scale-110" data-mood="great">😊</button>
+                        </div>
+
+                        <div id="mood-details-section" class="hidden">
+                            <div class="mb-6">
+                                <label class="block text-stone-700 font-semibold mb-3">What's influencing your mood? (optional)</label>
+                                <div id="mood-tags" class="flex flex-wrap gap-2 mb-3">
+                                    <button class="mood-tag bg-stone-200 text-stone-700 px-3 py-1 rounded-full text-sm">Exams</button>
+                                    <button class="mood-tag bg-stone-200 text-stone-700 px-3 py-1 rounded-full text-sm">Social</button>
+                                    <button class="mood-tag bg-stone-200 text-stone-700 px-3 py-1 rounded-full text-sm">Sleep</button>
+                                    <button class="mood-tag bg-stone-200 text-stone-700 px-3 py-1 rounded-full text-sm">Exercise</button>
+                                    <button class="mood-tag bg-stone-200 text-stone-700 px-3 py-1 rounded-full text-sm">Work</button>
+                                </div>
+                                <form id="custom-tag-form" class="flex gap-2">
+                                    <input type="text" id="custom-tag-input" class="flex-grow p-2 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 transition" placeholder="Add your own tag...">
+                                    <button type="submit" class="bg-amber-500 text-white font-bold px-4 py-2 rounded-lg hover:bg-amber-600 transition">Add</button>
+                                </form>
+                            </div>
+                            <div class="mb-6">
+                                <label for="mood-notes" class="block text-stone-700 font-semibold mb-2">Add a note (optional)</label>
+                                <textarea id="mood-notes" rows="4" class="w-full p-3 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 transition" placeholder="What's on your mind?"></textarea>
+                            </div>
+                        </div>
+
+                        <button id="log-mood-btn" class="w-full py-3 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600 transition disabled:bg-gray-400" disabled>
+                            Log Mood
+                        </button>
+                    </div>
+
+                    <div id="confirmation-message" class="hidden text-center">
+                        <h2 class="text-2xl font-bold text-stone-800 mb-4">Thank you for checking in.</h2>
+                        <p class="text-stone-600 mb-6">Your mood has been logged. Remember, acknowledging your feelings is a sign of strength.</p>
+                        <a href="dashboard.html" class="text-amber-600 hover:underline font-semibold">Back to Dashboard</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/student-dashboard.js"></script>
+</body>
+</html>

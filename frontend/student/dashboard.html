@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Dashboard - MindWell</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-stone-100">
+
+    <div class="min-h-screen flex flex-col">
+        <!-- Top Navigation -->
+        <header class="bg-white shadow-md sticky top-0 z-50">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="../index.html" class="flex items-center gap-2 text-2xl font-bold text-amber-600">
+                    <img src="\frontend\assets\icons\logo.svg" alt="MindWell Logo" class="h-8">
+                    MindWell
+                </a>
+                
+                <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold">
+                    <a href="dashboard.html" class="text-orange-500 border-b-2 border-orange-500 pb-1">Dashboard</a>
+                    <a href="mood-tracker.html" class="text-stone-600 hover:text-orange-500 transition-colors">Mood Tracker</a>
+                    <a href="journal.html" class="text-stone-600 hover:text-orange-500 transition-colors">Journal</a>
+                    <a href="appointments.html" class="text-stone-600 hover:text-orange-500 transition-colors">Appointments</a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <div id="current-date" class="hidden md:block text-sm text-stone-600 font-semibold"></div>
+                     <div class="relative">
+                        <button id="help-button" class="text-stone-600 hover:text-orange-500 transition-colors">
+                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </button>
+                        <div id="help-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl z-20">
+                            <a href="feedback.html" class="block px-4 py-2 text-stone-600 hover:bg-stone-100">Feedback</a>
+                            <a href="report-problem.html" class="block px-4 py-2 text-stone-600 hover:bg-stone-100">Report a Problem</a>
+                            <a href="contact.html" class="block px-4 py-2 text-stone-600 hover:bg-stone-100">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <button id="profile-button" class="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-lg">U</button>
+                        <div id="profile-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl z-20">
+                            <a href="profile.html" class="block px-4 py-2 text-stone-600 hover:bg-stone-100">Profile</a>
+                            <a href="../index.html" class="block px-4 py-2 text-stone-600 hover:bg-stone-100">Logout</a>
+                        </div>
+                    </div>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-stone-800 focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden border-t border-stone-200">
+                <a href="dashboard.html" class="block py-2 px-6 text-sm text-orange-500 font-bold bg-orange-50">Dashboard</a>
+                <a href="mood-tracker.html" class="block py-2 px-6 text-sm text-stone-600 hover:bg-stone-50">Mood Tracker</a>
+                <a href="journal.html" class="block py-2 px-6 text-sm text-stone-600 hover:bg-stone-50">Journal</a>
+                <a href="appointments.html" class="block py-2 px-6 text-sm text-stone-600 hover:bg-stone-50">Appointments</a>
+                <a href="resources.html" class="block py-2 px-6 text-sm text-stone-600 hover:bg-stone-50">Resources</a>
+            </div>
+        </header>
+
+        <main class="flex-1 overflow-x-hidden overflow-y-auto bg-stone-100 p-6">
+            <div class="container mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+                    <h2 id="dynamic-greeting" class="text-3xl font-bold text-stone-800 mb-2"></h2>
+                    <p class="text-stone-600">"The best time for new beginnings is now." - Take a moment for yourself today.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    <a href="mood-tracker.html" class="bg-amber-400 text-white p-6 rounded-lg shadow-lg hover:bg-amber-500 transition hover:scale-105">
+                        <h3 class="font-bold text-xl mb-2">Track Your Mood</h3>
+                        <p>How are you feeling today? Log your mood to see your progress.</p>
+                    </a>
+                    <a href="journal.html" class="bg-orange-400 text-white p-6 rounded-lg shadow-lg hover:bg-orange-500 transition hover:scale-105">
+                        <h3 class="font-bold text-xl mb-2">Write in Your Journal</h3>
+                        <p>Clear your mind and reflect on your thoughts in a safe space.</p>
+                    </a>
+                    <a href="../connect.html" class="bg-teal-400 text-white p-6 rounded-lg shadow-lg hover:bg-teal-500 transition hover:scale-105">
+                        <h3 class="font-bold text-xl mb-2">Find Support</h3>
+                        <p>Connect with counselors or our 24/7 AI assistant.</p>
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                    <div class="lg:col-span-2 bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-stone-800 mb-4">Your Mood This Week</h3>
+                        <div class="h-80 relative">
+                            <canvas id="moodHistoryChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="font-bold text-lg mb-2">Today's Focus</h3>
+                            <p class="text-stone-600 italic">"Progress, not perfection."</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="font-bold text-lg mb-4">Upcoming Appointments</h3>
+                            <div id="appointment-list" class="space-y-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- AI Chat Widget -->
+    <div id="chat-widget-container" class="fixed bottom-6 right-6 z-50">
+        <!-- Chat Bubble -->
+        <button id="chat-bubble" class="w-16 h-16 bg-orange-500 rounded-full shadow-lg flex items-center justify-center text-white">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+        </button>
+
+        <!-- Chat Popup -->
+        <div id="chat-popup" class="hidden absolute bottom-20 right-0 w-80 h-96 bg-white rounded-lg shadow-2xl flex flex-col">
+            <div class="p-4 border-b flex justify-between items-center bg-stone-50 rounded-t-lg">
+                <div>
+                    <h3 class="font-bold text-stone-800">AI Assistant</h3>
+                    <p class="text-sm text-stone-500">How can I help?</p>
+                </div>
+                <button id="close-chat" class="text-stone-500 hover:text-stone-800">&times;</button>
+            </div>
+            <div id="chat-window" class="flex-1 p-4 space-y-4 overflow-y-auto">
+                <div class="flex">
+                    <div class="bg-stone-200 text-stone-800 p-3 rounded-lg max-w-xs text-sm">
+                        <p>Hello! I'm here to listen. What's on your mind?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 border-t">
+                <form id="chat-form" class="flex items-center gap-2">
+                    <input type="text" id="chat-input" class="w-full p-2 border border-stone-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-amber-500" placeholder="Type your message..." autocomplete="off">
+                    <button type="submit" class="bg-orange-500 text-white font-bold p-2 rounded-lg hover:bg-orange-600 transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/student-dashboard.js"></script>
+</body>
+</html>

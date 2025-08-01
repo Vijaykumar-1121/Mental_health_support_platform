@@ -1,0 +1,13 @@
+/*
+ * MindWell - style.css
+ * --------------------
+ * This file is for any custom CSS that goes beyond the utility classes
+ * provided by Tailwind CSS. For example, you might add custom font definitions
+ * or complex animations here.
+ */
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Add any other global styles you need below */

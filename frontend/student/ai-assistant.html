@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant - MindWell</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body class="bg-stone-100">
+
+    <div class="min-h-screen flex flex-col">
+        <!-- Top Navigation -->
+        <header class="bg-white shadow-md sticky top-0 z-50">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="../index.html" class="flex items-center gap-2 text-2xl font-bold text-amber-600">
+                    <img src="\frontend\assets\icons\logo.svg" alt="MindWell Logo" class="h-8">
+                    MindWell
+                </a>
+                <a href="appointments.html" class="text-sm text-amber-600 hover:underline font-semibold">Back to Appointments</a>
+            </div>
+        </header>
+
+        <!-- Main Chat Content -->
+        <main class="flex-1 flex flex-col overflow-hidden p-4 md:p-6">
+            <div class="container mx-auto max-w-2xl flex-1 flex flex-col bg-white rounded-lg shadow-md">
+                <!-- Chat Header -->
+                <div class="p-4 border-b">
+                    <h1 class="text-xl font-bold text-stone-800">AI Assistant</h1>
+                    <p class="text-sm text-stone-500">A safe space to talk. Your conversation is private.</p>
+                </div>
+                
+                <!-- Message Display Area -->
+                <div id="chat-window" class="flex-1 p-6 space-y-4 overflow-y-auto">
+                    <!-- Initial Greeting from AI -->
+                    <div class="flex">
+                        <div class="bg-stone-200 text-stone-800 p-3 rounded-lg max-w-xs">
+                            <p>Hello! I'm your AI assistant. What's on your mind today? Feel free to share anything you're thinking about.</p>
+                        </div>
+                    </div>
+                    <!-- Messages will be added here -->
+                </div>
+                
+                <!-- Message Input Area -->
+                <div class="p-4 border-t bg-white">
+                    <form id="chat-form" class="flex items-center gap-4">
+                        <input type="text" id="chat-input" class="w-full p-3 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 transition" placeholder="Type your message here..." autocomplete="off">
+                        <button type="submit" class="bg-orange-500 text-white font-bold px-6 py-3 rounded-lg hover:bg-orange-600 transition">
+                            Send
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/ai-assistant.js"></script>
+</body>
+</html>

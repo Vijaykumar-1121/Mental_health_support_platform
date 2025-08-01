@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation - MindWell</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <style>
+        @keyframes breathe {
+            0% { transform: scale(0.8); }
+            50% { transform: scale(1); }
+            100% { transform: scale(0.8); }
+        }
+        .breathing-circle.animate {
+            animation: breathe 8s ease-in-out infinite;
+        }
+        
+        /* GIF Background Styling */
+        #background-gif {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the GIF covers the entire screen */
+            z-index: -2;
+            filter: brightness(0.6); /* Dims the background to make text readable */
+        }
+
+        #background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3); /* Adds a dark overlay */
+            z-index: -1;
+        }
+
+    </style>
+</head>
+<body class="bg-slate-800">
+
+    <!-- GIF Background -->
+    <!-- You can replace the src with any GIF URL you want -->
+    <img id="background-gif" src="https://i.pinimg.com/originals/a1/27/92/a127928228314ff95f543a82641a2c3a.gif" alt="Calm nature background">
+    <div id="background-overlay"></div>
+
+
+    <div class="min-h-screen flex flex-col">
+        <!-- Top Navigation -->
+        <header class="bg-slate-900/50 backdrop-blur-sm sticky top-0 z-50">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="../index.html" class="flex items-center gap-2 text-2xl font-bold text-white">
+                    <svg class="text-amber-500" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 18a8.5 8.5 0 0 1 7 0"/><path d="M6.3 12a2.3 2.3 0 0 1 2.2-2.2A4.5 4.5 0 0 1 12 7.5a4.5 4.5 0 0 1 3.5 2.3 2.3 2.3 0 0 1 2.2 2.2c0 .6-.2 1.2-.6 1.7a2.3 2.3 0 0 0-2.2 2.2c0 .6.2 1.2.6 1.7a2.3 2.3 0 0 1-2.2 2.2c-.6 0-1.2-.2-1.7-.6a4.5 4.5 0 0 1-3.5-3.5c-.4-.5-.6-1.1-.6-1.7Z"/><path d="M12 2v3"/><path d="M22 12h-3"/><path d="M2 12h3"/><path d="M19.1 4.9 17 7"/><path d="M7 7l-2.1-2.1"/></svg>
+                    MindWell
+                </a>
+                <a href="resources.html" class="text-sm text-amber-400 hover:underline font-semibold">Back to Resources</a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 flex items-center justify-center p-6">
+            <div class="text-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 mx-auto mb-8">
+                    <div class="absolute inset-0 bg-cyan-200 rounded-full opacity-20"></div>
+                    <div id="breathing-circle" class="breathing-circle absolute inset-2 bg-cyan-400 rounded-full transition-transform duration-4000 ease-in-out"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <p id="breathing-text" class="text-3xl font-bold text-white">Breathe In...</p>
+                    </div>
+                </div>
+                <button id="start-stop-btn" class="bg-orange-500 text-white font-bold px-8 py-3 rounded-full hover:bg-orange-600 transition text-lg">
+                    Start
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <audio id="peaceful-music" loop>
+        <!-- In a real app, you would host this audio file. For now, we'll use a placeholder. -->
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="../js/meditation.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - MindWell</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body class="bg-stone-100">
+
+    <div class="min-h-screen flex flex-col">
+        <!-- Top Navigation -->
+        <header class="bg-white shadow-md sticky top-0 z-50">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="../index.html" class="flex items-center gap-2 text-2xl font-bold text-amber-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 18a8.5 8.5 0 0 1 7 0"/><path d="M6.3 12a2.3 2.3 0 0 1 2.2-2.2A4.5 4.5 0 0 1 12 7.5a4.5 4.5 0 0 1 3.5 2.3 2.3 2.3 0 0 1 2.2 2.2c0 .6-.2 1.2-.6 1.7a2.3 2.3 0 0 0-2.2 2.2c0 .6.2 1.2.6 1.7a2.3 2.3 0 0 1-2.2 2.2c-.6 0-1.2-.2-1.7-.6a4.5 4.5 0 0 1-3.5-3.5c-.4-.5-.6-1.1-.6-1.7Z"/><path d="M12 2v3"/><path d="M22 12h-3"/><path d="M2 12h3"/><path d="M19.1 4.9 17 7"/><path d="M7 7l-2.1-2.1"/></svg>
+                    MindWell
+                </a>
+                
+                <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold">
+                    <a href="dashboard.html" class="text-stone-600 hover:text-orange-500 transition-colors">Dashboard</a>
+                    <a href="mood-tracker.html" class="text-stone-600 hover:text-orange-500 transition-colors">Mood Tracker</a>
+                    <a href="journal.html" class="text-stone-600 hover:text-orange-500 transition-colors">Journal</a>
+                    <a href="appointments.html" class="text-stone-600 hover:text-orange-500 transition-colors">Appointments</a>
+                    <a href="resources.html" class="text-orange-500 border-b-2 border-orange-500 pb-1">Resources</a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <div class="relative">
+                        <button id="profile-button" class="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-lg">U</button>
+                        <div id="profile-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl z-20">
+                            <a href="profile.html" class="block px-4 py-2 text-stone-600 hover:bg-stone-100">Profile</a>
+                            <a href="../index.html" class="block px-4 py-2 text-stone-600 hover:bg-stone-100">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-1 overflow-x-hidden overflow-y-auto bg-stone-100 p-6">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl font-bold text-stone-800 mb-2">Resource Hub</h1>
+                    <p class="text-lg text-stone-600">Explore articles, tools, and information to support your mental wellness journey.</p>
+                </div>
+
+                <!-- Featured Tool -->
+                <div class="max-w-4xl mx-auto mb-12">
+                    <a href="meditation.html" class="block bg-cyan-600 text-white p-8 rounded-lg shadow-lg hover:bg-cyan-700 transition transform hover:scale-105">
+                        <div class="flex items-center gap-6">
+                            <div class="flex-shrink-0">
+                                <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-3xl font-bold">Guided Breathing Exercise</h3>
+                                <p>Take a moment to center yourself with our interactive breathing tool.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Search and Filters -->
+                <div class="mb-8 max-w-3xl mx-auto space-y-4">
+                    <input type="text" id="resource-search" placeholder="Search for articles, videos, and more..." class="w-full p-3 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 transition">
+                    <div id="topic-filters" class="flex justify-center gap-2 flex-wrap">
+                        <button class="topic-filter-btn bg-amber-500 text-white px-4 py-2 rounded-full text-sm" data-topic="all">All Topics</button>
+                        <button class="topic-filter-btn bg-white text-stone-700 px-4 py-2 rounded-full text-sm" data-topic="stress">Stress</button>
+                        <button class="topic-filter-btn bg-white text-stone-700 px-4 py-2 rounded-full text-sm" data-topic="anxiety">Anxiety</button>
+                        <button class="topic-filter-btn bg-white text-stone-700 px-4 py-2 rounded-full text-sm" data-topic="focus">Focus</button>
+                        <button class="topic-filter-btn bg-white text-stone-700 px-4 py-2 rounded-full text-sm" data-topic="sleep">Sleep</button>
+                    </div>
+                </div>
+
+                <div id="resource-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Resource cards will be dynamically inserted here -->
+                </div>
+                 <div id="no-results" class="hidden text-center py-16">
+                    <p class="text-xl text-stone-500">No resources found. Try a different search or filter.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/student-dashboard.js"></script>
+</body>
+</html>
